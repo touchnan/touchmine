@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>发起话题</title>
+<link type="text/css" href="../style/validationEngine.jquery.css" rel="stylesheet">
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine-zh_CN.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine.js"></script>
+
+
+<script type="text/javascript" src="../scripts/bbs.top-afterlogin.js"></script>
+<script type="text/javascript" src="../scripts/bbs.js"></script>
+
+
+</head>
+<body>
+	<div class="bbs-main">
+		
+		<div class="grid_17 discc-form">
+			<h2 class="bbs-list-h2">发起话题</h2>
+			<form  id="form">
+				<ul class="list bbs-list">
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>标题：
+							</span>
+							<input type="text" data-validation-engine="validate[required,maxSize[30]">
+						</label>
+						<div style="display:block;" class="list-msg">
+							<p class="list-msg-suggest">
+								标题名请勿超过30个字符
+							</p>
+						</div>
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>内容：
+							</span>
+							<textarea data-validation-engine="validate[required,minSize[5]" class="discc-form-textarea"></textarea>
+						</label>
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>标签：
+							</span>
+							<input placeholder="美食 搞笑 吐槽 五花八门" data-validation-engine="validate[required,custom[noSpecialCaracters]" type="text">
+						</label>
+					   
+						<div style="display:block;" class="list-msg">
+							<p class="list-msg-suggest">
+								至少一个，最多5个，标签之间用空格隔开，比如：糖醋鲫鱼
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="list-msg">
+							<p>特别说明：</p>
+							<ul>
+								<li>1.话题发起者禁止删除其他人的回复，可以删除该话题，但删除操作会被系统记录。</li>
+								<li>2.商店店主</li>
+								<li>&nbsp&nbsp1).禁止删除话题内的其他人的回复，</li>
+								<li>&nbsp&nbsp2).可以删除话题，但加v验证的店主无权删除话题</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="list-msg">
+							<label>
+								<input type="checkbox" value="yes">
+								<span>
+									我同意接受<span class="main-color">happy112</span>的各项<a href="#" target="_blank">发帖规范</a>和<a href="#" target="_blank">隐私权政策</a>。
+								</span>
+							</label>
+
+						</div>
+					</li>
+					
+					<li>
+						<div class="list-msg">
+							<!-- <button class="all-btn blue-btn">提 交</button> -->
+							<a href="bbs.discussic-edit.html" class="all-btn green-btn">提 交</a>
+							<a href="#" class="all-btn green-btn">取 消</a>
+						</div>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="grid_7 discc-form-tips">
+			<a class="all-btn grey-btn back" href="bbs.shop.html">返 回</a>
+			<h3 class="tag4">
+				<span class="left main-color">Tip:怎样写出绝妙好帖？</span>
+			</h3>
+			<ul class="list vertical-menu2">
+				<li>1.请填写有效的店铺信息</li>
+				<li>blablabla</li>
+				<li>房间的了双方就死定了</li>
+				<li>看看法律上的</li>
+				<li>发的说法是的</li>
+				<li>发的说法是的</li>
+			</ul>
+			
+		</div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#form").validationEngine();
+		$("#form").validationEngine('attach', {promptPosition : "bottomRight", scroll: false});
+		$('#form input').each(function () {
+			// console.log($(this))
+			$(this).bind("blur",function(){
+				// alert("fsdfsdf");
+				if(this.value=='') this.value=this.defaultValue	;
+			});
+			$(this).bind("focus",function(){
+				// alert("focus");
+				if(this.value==this.defaultValue) this.value='';
+			});
+		});
+	});
+</script>
+</body>
+</html>

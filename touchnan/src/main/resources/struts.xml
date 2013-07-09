@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <!-- constant name="struts.objectFactory" value="spring" /-->
+    <constant name="struts.devMode" value="true" />
+    <!-- constant name="struts.action.excludePattern" value=".*unfiltered.*,.*\\.nofilter"/ -->
+    <constant name="struts.action.extension" value="htm," />
+    <!-- need struts2-convention-plugin 
+    <constant name="struts.configuration.classpath.defaultParentPackage" value="frame-default"></constant>
+     -->
+
+    <package name="frame-default" namespace="/" extends="json-default">
+    
+        <interceptors>
+            <interceptor name="touchinError" class="cn.touchin.interceptor.ExceptInterceptor"/>
+
+            <interceptor-stack name="touchinStack">
+            	<interceptor-ref name="json"/>
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="touchinError"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="touchinStack"/>
+        
+        <default-action-ref name="index" />
+        
+        <global-results>
+			<result name="error" type="freemarker">/ftl/sys/error.ftl</result>
+		    <result name="json" type="json"><param name="includeProperties">1</param></result>
+		    <result name="obj-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">^obj.*</param>
+		    </result>
+		    <result name="list-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">^lists.*</param>
+		    </result>		    		    
+		    <result name="page-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">^pageData.*</param>
+		    	<param name="excludeProperties">^pageData.*passwd</param>
+		    </result>
+		    <result name="error-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">^errorVo.*</param>
+		    </result>		    
+		    <result name="save-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">id</param>
+		    </result>
+            <result name="tree-json" type="json">
+		    	<param name="ignoreHierarchy">false</param>
+		    	<param name="includeProperties">^tree.*</param>
+		    </result>
+			<result name="down" type="stream">
+                <!-- param name="contentCharSet">utf-8</param-->
+                <param name="encode">true</param>
+                <param name="contentType">*/*,charset=UTF-8</param>
+                <param name="inputName">stream</param>
+                <param name="contentDisposition">attachment;filename="${showName}"</param>
+                <param name="bufferSize">20480</param>
+            </result>		    
+		</global-results>
+		
+		<global-exception-mappings>
+		    <exception-mapping result="error" exception="java.lang.Throwable"/>
+		</global-exception-mappings>
+		
+        <action name="index">
+        	<result type="freemarker">/index.ftl</result>
+        </action>
+        
+        <action name="auth" method="{1}" class="cn.touchnan.busi.www.AuthAction">
+            <result><param name="actionName">index</param></result>
+            <result name="login" type="freemarker">login.ftl</result>        	
+        </action>
+        
+        <action name="auth!*" method="{1}" class="cn.touchnan.busi.www.AuthAction">
+            <result name="logout" type="redirectAction">
+                <param name="actionName">index</param>
+            </result>            
+        </action>        
+            
+    </package>
+
+    <!-- Add packages here -->
+	<include file="struts/actions.xml"/>
+</struts>

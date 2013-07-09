@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="main" namespace="/c" extends="frame-default">
+        <action name="main" class="cn.touch.imr.busi.www.MainAction">
+            <result name="success">/template/main.jsp</result>
+            <result name="login">/template/sys/login.jsp</result>
+        </action>
+
+        <action name="main!*" method="{1}" class="cn.touch.imr.busi.www.MainAction">
+            <result>/template/{1}.jsp</result>
+            <result name="logout" type="redirectAction">
+                <param name="actionName">main</param>
+                <param name="namespace">/c</param>
+            </result>
+        </action>
+        
+        <action name="statist!*" method="{1}" class="cn.touch.imr.busi.www.StatistAction">
+        	<result>/template/statist/{1}.jsp</result>
+        	<result name="ftl" type="freemarker">/template/statist/{1}.ftl</result>
+        </action>
+ 		
+    </package>
+    
+    <package name="site" namespace="/site" extends="frame-default">
+    	<!-- 各服务站点相关查询 -->
+    	
+    	<!-- Add actions here -->
+    </package>
+    
+    <package name="mgr" namespace="/mgr" extends="frame-default">
+    	<!-- 后台管理地址 -->
+    	
+    	<action name="enum!*" method="{1}" class="cn.touch.imr.busi.www.mgr.EnumAction"></action>
+    	
+		<action name="user!*" method="{1}" class="cn.touch.imr.busi.www.mgr.UserAction">
+			<result>/template/user/{1}.jsp</result>
+		</action>
+		
+		<action name="file!*" method="{1}" class="cn.touch.imr.busi.www.mgr.FileDownAction">
+			<result>/template/file/{1}.jsp</result>
+			<result name="ftl" type="freemarker">/template/file/{1}.ftl</result>
+		</action>		
+    </package>
+</struts>

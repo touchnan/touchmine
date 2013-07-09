@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="../linkage.js"></script>
+ </head>
+
+<script type="text/javascript">
+<!--
+
+var data = [
+  {id:1,name:'中国',children:[
+	{id:11,name:'浙江',children:[
+			{id:111,name:'杭州',children:[]},
+			{id:112,name:'湖州',children:[]},
+			{id:113,name:'台州',children:[]}
+		]},
+	{id:12,name:'江苏',children:[
+			{id:121,name:'南京',children:[]},
+			{id:122,name:'扬州',children:[]},
+		]},
+	{id:13,name:'广东',children:[
+			{id:131,name:'深圳',children:[]},
+			{id:132,name:'广州',children:[]},
+		]}
+  ]},
+  {id:2,name:'美国',children:[
+	{id:21,name:'德州',children:[
+			{id:211,name:'德州-苏明达',children:[]},
+			{id:212,name:'德州-2',children:[]},
+		]},
+	{id:22,name:'加州',children:[
+			{id:221,name:'加州－1',children:[]},
+			{id:222,name:'加州－2',children:[]},		
+		]},
+  ]},
+  {id:3,name:'日本',children:[
+	{id:31,name:'神户',children:[]},
+	{id:32,name:'北海道',children:[]},
+  ]},
+]
+
+function before() {
+   //原来的onChange事件，测试用看看是否正常调用了
+   var a = 0;
+}
+
+function initLink() {
+	var linkObj = new Linkage(
+			[document.getElementById("contractDto.contractProperty"),
+			 	document.getElementById("contractDto.contractClass"),
+				document.getElementById("contractDto.contractSubclass")
+			], 
+			data,{choice:true,text:"自定义",value:""});
+	
+	//linkObj.setValue([2,22,222]).setValue([1,13,132]);
+}
+
+//-->
+</script>
+ <body onload = "initLink()">
+	<select name="contractDto.contractProperty" id="contractDto.contractProperty" onchange="before()">
+	</select>
+
+	<select name="contractDto.contractClass" id="contractDto.contractClass" onchange="before()">
+	</select>
+
+	<select name="contractDto.contractSubclass" id="contractDto.contractSubclass" onchange="before()">
+	</select>
+ </body>
+</html>

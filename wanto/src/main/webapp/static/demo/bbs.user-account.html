@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>个人主页 必定登录后</title>
+<link type="text/css" href="../style/validationEngine.jquery.css" rel="stylesheet">
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine-zh_CN.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine.js"></script>
+
+
+<script type="text/javascript" src="../scripts/bbs.top-afterlogin.js"></script>
+<script type="text/javascript" src="../scripts/bbs.js"></script>
+
+</head>
+<body>
+	<div class="bbs-main">
+		<div class="left man-left">
+			<div class="models">
+				<h3 class="tag1 main-color">
+					<span>用 户</span>
+				</h3>
+				<ul class="list vertical-menu3">
+					<li>
+						<a href="bbs.user-discuss-reply.html" title="最新动态">
+							最新动态
+						</a>
+					</li>
+					
+					<li  class="active">
+						<a href="bbs.user-account.html" title="个人信息">个人信息</a>
+					</li>
+					
+				</ul>
+				<h3 class="tag1 main-color">
+					<span>管 理</span>
+				</h3>
+				<ul class="list vertical-menu3">
+
+					<li>
+						<a href="bbs.user-shopmanage.html" title="店 铺">
+							店 铺
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+
+		</div>
+		<div class="left man-right">
+			<div class="man-right-con">
+				<h2 class="bbs-list-h2">
+					mudenglong 的个人信息
+					
+					<span class="right small">2012-08-15注册</span>
+					<span class="right small">ID：mudenglong@163.com</span>
+				</h2>
+				<div class="account-list">
+					<form>
+						<ul class="list mana-list">
+							<li>
+								<label>
+									<span class="list-l">
+										昵称：
+									</span>
+									<input type="text" value="mudenglong">
+								</label>
+								<div class="list-msg" style="display:block;">
+									<p class="list-msg-error">Error:格式限制.</p>
+								</div>
+							</li>
+							
+							<li>
+								<div>
+									<span class="list-l">
+										我的头像:
+									</span>
+									<img src="../img/goodssmallpic_2.jpg_40x40.jpg" alt="我的头像">
+									<span>
+										<a href="bbs.user-icon-change.html">更改</a>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span class="list-l">
+										我的学校：
+									</span>
+									<span>
+										<select>
+											<option value="0">选择学校</option>
+											<option value="1">以后再填</option>
+											<option value="2">中国计量学院</option>
+											<option value="3">智利</option>
+											<option value="4">中非共和国</option>
+										</select>
+									</span>
+									<label>
+										<input type="checkbox" value="yes">
+										<span>
+											仅自己可见
+										</span>
+									</label>
+								</div>
+								<div class="list-msg" style="display:block;">
+									<p class="list-msg-suggest">
+										如果填写了学校，以后关于自己学校的一些信息就可以汇总给他（目前用处不大）
+									</p>
+								</div>
+							</li>
+							<li>
+								<label>
+									<span class="list-l">
+										心情：
+									</span>
+									<input type="text" value="当前心情">
+								</label>
+								<div class="list-msg" style="display:block;">
+									<p class="list-msg-error">Error:字数限制.</p>
+								</div>
+							</li>
+							
+							<li>
+								<div>
+									<span class="list-l">
+										我的家乡：
+									</span>
+									<span>
+										<select>
+											<option value="0">选择家乡</option>
+											<option value="1">以后再填</option>
+											<option value="GIB">浙江</option>
+											<option value="CHL">湖北</option>
+										</select>
+									</span>
+									<label>
+										<input type="checkbox" value="yes">
+										<span>
+											仅自己可见
+										</span>
+									</label>
+
+								</div>
+							   
+								<div class="list-msg" style="display:block;">
+									<p class="list-msg-suggest">
+										只到省级，先不细分
+									</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span class="list-l">
+										密码:
+									</span>
+									<span style="line-height: 28px;">
+										<a href="bbs.user-password-change.html">更改</a>
+									</span>
+									
+								</div>
+							</li>
+							<li>
+							<div class="list-msg">
+								<label>
+									<input type="checkbox" value="yes">
+									<span>
+										可以通过个人信息搜索到我
+									</span>
+								</label>
+
+							</div>
+						</li>
+							<li>
+								<div class="list-msg">
+									<!-- <button class="all-btn blue-btn">提 交</button> -->
+									<a class="all-btn green-btn" href="#">更新信息</a>
+								</div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

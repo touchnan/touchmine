@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>UploadiFive Test</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.uploadify.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="uploadify.css">
+<style type="text/css">
+body {
+	font: 13px Arial, Helvetica, Sans-serif;
+}
+#queue {
+    background-color: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    margin-bottom: 10px;
+    overflow: auto;
+    padding: 5px 10px;
+    width: 600px;
+}
+.upload-pic{
+    float: left;
+
+}
+.upload-pic img{
+
+    height: 90px;
+    width: 120px;
+}
+.upload-info{
+	float: left;
+}
+.upload-close{
+	position: absolute;
+    right: 0;
+    top: 2px;
+}
+.uploadify-queue-item{
+    overflow: hidden;
+    position: relative;
+    max-width: none;
+}
+</style>
+
+</head>
+
+<body>
+	<h1>Uploadify Demo</h1>
+
+		<div id="queue"></div>
+
+		<input id="file_upload" name="file_upload" type="file" multiple="true">
+		<a href="javascript:$('#file_upload').uploadify('upload','*')">上传</a>| 
+      	<a href="javascript:$('#file_upload').uploadify('cancel')">取消第一个文件</a> | 
+      	<a href="javascript:$('#file_upload').uploadify('cancel', '*')">取消全部</a> | 
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<!-- <div class="upload-list">
+		<ul>
+			<li>
+				<input type="hidden" value="17038294" name="picId">
+				<div class="upload-pic">
+					<img src="#">
+				</div>
+				<div class="upload-info">
+					<div class="upload-info-title">
+						<strong>标题：</strong>
+						<input type="text" />
+					</div>
+					<div class="upload-info-desc">
+						<strong>简单描述：</strong>
+						<input type="text" />
+					</div>
+				</div>
+				<a title="删除图片" href="javascript:" class="upload-close">删除图片</a>
+			</li>
+		</ul>
+	</div> -->
+
+	<script type="text/javascript">
+	<?php $timestamp = time();?>	
+		$(function() {
+			
+			$('#file_upload').uploadify({
+				'swf'      : 'uploadify.swf',
+				'uploader' : 'uploadify.php',
+                'queueID': 'queue',
+                'removeCompleted' : false,  //上传在队列成功后，不消失
+                // 'multi'    : true, //可支持多文件上传
+                'fileSizeLimit' : '2048KB', //单个文件上传大小限制
+                'auto' : false, //取消加入队列的图片自动上传
+				// 'itemTemplate' :'<div id="${fileID}" class="uploadify-queue-item">\	<div class="cancel">\
+				//     	<a href="javascript:$(\'#${instanceID}\').uploadify(\'cancel\', \'${fileID}\')">X</a>\
+				// 	</div>\<span class="fileName">${fileName} (${fileSize})</span><span class="data"></span>\
+				// </div>',
+
+                // 'buttonText':'BROWSE',  按钮文字
+                // 'progressData' : 'speed',
+				'formData' : {'timestamp' : '<?php echo $timestamp; ?>', 'token' : '<?php echo md5('unique_hash'.$timestamp); ?>'},
+				
+				'onSelect' : function(file) {
+		  //           alert( 'id:' + file.id
+				// 　　+ ' - 索引: ' + file.index
+				// 　　+ ' - 文件名: ' + file.name
+				// 　　+ ' - 文件大小: ' + file.size
+				// 　　+ ' - 类型: ' + file.type
+				// 　　+ ' - 创建日期: ' + file.creationdate
+				// 　　+ ' - 修改日期: ' + file.modificationdate
+				// 　　+ ' - 文件状态: ' + file.filestatus);
+		            var itemTemplate = '<div id='+file.id+' class="uploadify-queue-item">\
+					<div class="cancel">\
+						<a href="javascript:$(\'#file_upload\').uploadify(\'cancel\', \''+file.id+'\')">X</a>\
+					</div>\
+					<span class="'+file.name+'">'+file.name+' '+file.size+'</span><span class="data"></span>\
+					<div class="uploadify-progress">\
+						<div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+					</div>\
+				</div>';
+					// $('#queue').append(itemTemplate);
+					$('#' + this.settings.queueID).append(itemTemplate);
+					//$("#pic").attr("src", "uploads/" + file.name).height(90).width(130);
+
+
+		        },
+				// 'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
+				// 	$('#progress').html(totalBytesUploaded + ' bytes uploaded of ' + totalBytesTotal + ' bytes.');
+				// },
+				'onUploadStart' : function(file) {
+		            //alert('Starting to upload ' + file.name);
+		        },
+				'onUploadSuccess' : function(file, data, response) {
+					// $("#pic").attr("src", "uploads/" + file.name).height(90).width(130);
+					//alert('onUploadSuccess:The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+					//alert('The file was saved to: ' + data);
+					$('#'+file.id).remove();
+					var itemSuccess ='<div id='+file.id+' class="uploadify-queue-item">\
+					<div class=\"upload-pic\"><img src=\"'+'uploads/' + file.name+'\"></div>\
+							<div class=\"upload-info\">\
+								<div class=\"upload-info-title\"><strong>标题：</strong><input type=\"text\"/></div>\
+								<div class=\"upload-info-desc\"><strong>简单描述：</strong><input type=\"text\"/></div>\
+							</div>\
+							<a title=\"删除图片\" href=\"javascript:;\"class=\"upload-close\">删除图片</a>\
+							</div>'
+							
+					$('#' + this.settings.queueID).append(itemSuccess);
+
+				},
+		        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+					//alert('onUploadError:The file ' + file.name + ' could not be uploaded: ' + errorString);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

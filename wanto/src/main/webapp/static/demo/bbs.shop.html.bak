@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>店铺主页 登录前</title>
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+<link type="text/css" href="../style/shop-show.css" rel="stylesheet">
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="../scripts/demo.js"></script>
+
+<script type="text/javascript" src="../scripts/bbs.top-beforelogin.js"></script>
+<script type="text/javascript" src="../scripts/bbs.js"></script>
+
+
+</head>
+<body>
+	
+
+	<div class="bbs-main bbs-shop">
+		
+		<div class="grid_17 shop-info">
+			<h2 >弄堂里湖墅店</h2>
+			<span class="verificate-pic">是否加V </span>
+			<p class="magazine"><span>《昕沙》</span>201207期第34页</p>
+			<h4>创建人：<a title="店长" href="#">mudenglong</a></h4>
+			<ul>
+				<li>
+					<p class="tags">
+						店铺标签：
+						<a href="#">火锅</a>
+						<a href="#">西湖区</a>
+						<a href="#">黄龙路</a>
+					</p>
+				</li>
+				<li>
+					<p>详细位置：杭州市莫干山路118号</p>
+				</li>
+				<li>
+					<p>简介：（200字以内）杭州市是一家历史悠久的老店，专营房价多少来房间收到了减肥裤收到了焚枯食淡了卡斯迪朗辅导老师福建省的费独立思考房价开始打了减肥裤收到了 焚枯食淡了 加快速度了收到了收到了莫干山路118号</p>
+				</li>
+			</ul>
+			
+			
+			<p class="evaluate"><span class="like">123</span>人喜欢</p>
+			<p class="evaluate"><span class="dislike">12</span>人不喜欢</p>
+			<p class="evaluate"><span class="viewed">20331</span>人浏览过</p>
+			<div class="right evaluate-pic">
+				<a href="javascript:;" class="like-pic"><span>喜欢图标</span>喜 欢</a>
+				<a href="javascript:;" class="dislike-pic"><span>不喜欢图标</span>不喜欢</a>
+			</div>
+			
+			<div class="boss">这是我的店铺： <a href="bbs.shop-management.html">进入管理店铺》》</a></div>
+
+
+		</div>
+		<div class="grid_7 shop-mainpic">
+			<img style="width:230px;" src="../img/shop1.jpg" />
+		</div>
+		
+		<div class="shop-bulletin clear">
+			<h3 class="orange">店长说：</h3>
+			<p>即日起，促销三天，让利大酬宾！！！机会不容错过</p>
+		</div>
+		<div class="shop-center">
+			
+			<div class="grid_17 shop-gs-show" id="container" style="padding-right: 0;">
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="javascript:;" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="javascript:;" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad1.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						
+					</div>
+
+					<p class="shop-gsDescription">红烧鲫鱼 清蒸鲫鱼 就放开发了东方 附近的了双方就多了</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						6 喜欢
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+						
+					</p>
+
+				</div>
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="javascript:;" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="javascript:;" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad2.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+					</div>
+
+					<p class="shop-gsDescription">no-bake peanut butter bars gfdgdfg gfdgdf gdfgdfg</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						6 喜欢
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+						
+					</p>
+
+				</div>
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="javascript:;" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="javascript:;" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad3.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						
+					</div>
+
+					<p class="shop-gsDescription">呆呆哥呵哥呆呆哥呵哥呆呆哥呵哥呆呆哥呵哥呆呆哥呵哥呆呆哥呵哥</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 32323.23 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						63232323 喜欢
+						&nbsp;&nbsp;</span><span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+						
+					</p>
+
+				</div>
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="javascript:;" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="javascript:;" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad4.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						
+					</div>
+
+					<p class="shop-gsDescription">no-bake peanut butter bars</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						6 喜欢
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+					</p>
+
+				</div>
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="#" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="#" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad5.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+					</div>
+
+					<p class="shop-gsDescription">no-bake peanut butter bars</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						6 喜欢
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+						
+					</p>
+
+				</div>
+				<div class="shop-gs">
+					<div class="shop-gsbox">
+						<div class="shop-action" style="display:none;">
+							<a href="#" class="left">
+								<span>喜 欢</span>
+							</a>
+							<a href="#" class="right">
+								<span>不喜欢</span>
+							</a>
+						</div>
+						<a href="javascript:;" class="shop-gsImageLink">
+							<img src="../img/ad6.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+					</div>
+
+					<p class="shop-gsDescription">no-bake peanut butter bars</p>
+					
+					<p class="color1">
+						<span class="shop-gsPrice">
+						32 元
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsLikesCount">
+						6 喜欢
+						&nbsp;&nbsp;</span>
+						<span class="shop-gsImageView">
+							<a href="bbs.shop-images.html" target="_blank" class="main-color">查 看</a>
+						</span>
+						
+					</p>
+
+				</div>
+			</div>
+
+			<div class="grid_7 shop-discussic">
+
+				<div class="topic">
+					<a href="bbs.discussion-creat.html" class="all-btn green-btn">我要发起话题</a>
+				</div>
+
+				<h3>大家说：</h3>
+				<table class="shop-table">
+					<tbody>
+						<tr>
+					    	<td style="width:80%;">话题</td>
+					    	<td nowrap="nowrap" class="td2" style="width:20%;">回应</td>
+						</tr>
+					    <tr>
+					        <td>
+					            <a title="Oh My God" href="bbs.discussic-show.html">Oh My God 太坑爹太坑爹坑爹</a>
+					        </td>
+					        <td nowrap="nowrap" class="td2">12345</td>
+					    </tr>
+					    <tr>
+					        <td>
+					            <a title="天空之城" href="bbs.discussic-show.html">天空之城</a>
+					        </td>
+					        <td nowrap="nowrap" class="td2">12345</td>
+					    </tr>
+					</tbody>
+				</table>
+				<ul class="bbs-page">
+					<li><span class="prev">&lt;&lt;</span></li>
+					<li><a href="#">1</a></li>
+					<li><span class="thispage">2</span></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><span class="break">...</span></li>
+					<li><a href="#">30</a></li>
+					<li>
+						<span class="next">
+							<a href="#">&gt;&gt;</a>
+						</span>
+					</li>
+					
+
+				</ul>
+				
+			</div>
+
+
+		</div>
+	</div>
+<script>
+ $(function(){
+    $('#container').masonry({
+      itemSelector: '.shop-gs',
+      // columnWidth: 233
+      columnWidth: 217
+    });
+
+
+    $(".shop-gsbox").hover(
+	  function () {
+	    $(this).children(".shop-action").css({display: "block"});
+	  },
+	  function () {
+	    $(this).children(".shop-action").css({display: "none"});
+	  }
+	);
+
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+@CHARSET "utf-8";
+body {
+	font: 62.5% "宋体", Arial, "Trebuchet MS", "Helvetica", "Arial", "Verdana",
+		"sans-serif";;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 12px 0;
+}
+
+h4 {
+	color: #CC0000;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+h5 {
+	color: #990000;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.touchin-box{
+	text-align: center;
+}
+
+/*全局的input等样式 以下*/
+select,textarea,input[type="email"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"],input[type="url"],.allcategory
+	{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-color: #C0C0C0 #D9D9D9 #D9D9D9;
+	border-radius: 1px 1px 1px 1px;
+	border-style: solid;
+	border-width: 1px;
+	display: inline-block;
+	margin: 0;
+	padding: 6px 4px;
+}
+
+select {
+	font-size: 14px;
+	line-height: 14px;
+	padding: 1px 2px;
+}
+
+select:hover,textarea:hover,input[type="email"]:hover,input[type="number"]:hover,input[type="password"]:hover,input[type="text"]:hover,input[type="url"]:hover,.allcategory:hover
+	{
+	border-color: #A0A0A0 #B9B9B9 #B9B9B9;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+select:focus,textarea:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="password"]:focus,input[type="text"]:focus,input[type="url"]:focus,.allcategory:focus
+	{
+	border: 1px solid #149551;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+	outline: medium none;
+}
+
+input[type="checkbox"],input[type="radio"] {
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	margin: 0;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:hover {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+input.form-error[type="checkbox"],input.form-error[type="email"],input.form-error[type="number"],input.form-error[type="password"],input.form-error[type="text"],input.form-error[type="url"]
+	{
+	border: 1px solid #CD4E31;
+}
+
+/*全局的input等样式 以上*/
+
+/*按钮样式 以下*/
+/* 渐变按钮 样式1 以下 */
+.all-btn {
+	padding: 5px 18px;
+	border-radius: 4px;
+	line-height: normal;
+	font-size: 13px;
+	overflow: visible;
+	display: inline;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.all-btn:active {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.all-btn:focus {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) inset;
+	border-color: #4e4e4e;
+}
+
+.small-btn {
+	font-size: 10px;
+	padding: 3px 6px;
+}
+
+.large-btn {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 20px;
+}
+
+.blue-btn {
+	background-color: #4D90FE;
+	background-image: -moz-linear-gradient(top, #049CDB, #0064CD);
+	background-image: -ms-linear-gradient(top, #049CDB, #0064CD);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049CDB),
+		color-stop(100%, #0064CD) );
+	background-image: -webkit-linear-gradient(top, #049CDB, #0064CD);
+	background-image: -o-linear-gradient(top, #049CDB, #0064CD);
+	background-image: linear-gradient(top, #049CDB, #0064CD);
+	border-color: #6baef3 #3764c4 #3764c4 #6baef3;
+	color: #FFFFFF;
+}
+
+.blue-btn span {
+	color: #fff;
+}
+
+.blue-btn:hover {
+	background-color: #0064CD;
+	background-image: none;
+	border: 1px solid #2F5BB7;
+	text-decoration: none;
+}
+
+.def-btn {
+	background-color: #F5F5F5;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #E5E5E5);
+	background-image: -ms-linear-gradient(top, #FFFFFF, #E5E5E5);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF),
+		color-stop(100%, #E5E5E5) );
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #E5E5E5);
+	background-image: -o-linear-gradient(top, #FFFFFF, #E5E5E5);
+	background-image: linear-gradient(top, #FFFFFF, #E5E5E5);
+	border-color: #CCCCCC #CCCCCC #BBBBBB;
+	color: #333333;
+}
+
+.def-btn span {
+	color: #333333;
+}
+
+.def-btn:hover {
+	background-color: #E9E9E9;
+	background-image: none;
+	border: 1px solid #A3A3A3;
+	text-decoration: none;
+}
+
+.red-btn {
+	background-color: #e84843;
+	background-image: -moz-linear-gradient(top, #EE5F5B, #C43C35);
+	background-image: -ms-linear-gradient(top, #EE5F5B, #C43C35);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF),
+		color-stop(100%, #E5E5E5) );
+	background-image: -webkit-linear-gradient(top, #EE5F5B, #C43C35);
+	background-image: -o-linear-gradient(top, #EE5F5B, #C43C35);
+	background-image: linear-gradient(top, #EE5F5B, #C43C35);
+	border-color: #df6352 #a7210f #a7210f #df6352;
+	color: #fff;
+}
+
+.red-btn span {
+	color: #fff;
+}
+
+.red-btn:hover {
+	background-color: #C43C35;
+	background-image: none;
+	border: 1px solid #A3A3A3;
+	text-decoration: none;
+}
+
+button:focus {
+	border: 1px solid #4D90FE;
+}
+
+form {
+	margin-bottom: 2px;
+}
+/* 渐变按钮 样式1 以上 */
+.list li {
+	display: block;
+	line-height: 26px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.list-l {
+	display: inline;
+	float: left;
+	line-height: 28px;
+	text-align: right;
+	width: 100px;
+}
+
+/* 上传样式1 input file 以下*/
+.upfile1-btn {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: defalut;
+}
+
+.upfile1-btn a {
+	color: #fff;
+}
+
+.upfile1-input {
+	border: medium none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: default;
+	font-size: 18px;
+	filter: alpha(opacity =     0);
+}
+
+/*  上传样式1 input file 以上 */
+
+/* 上传文件图片样式  以下*/
+
+/* 上传文件图片样式  以上*/
+
+.def-list {
+	display: block;
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.def-list textarea,.def-list input[type="email"],.def-list input[type="number"],.def-list input[type="password"],.def-list input[type="text"],.def-list input[type="url"]
+	{
+	width: 60%;
+}
+
+.def-list input[type="password"] {
+	width: 40%;
+}
+
+.def-list input[type="number"] {
+	width: 12%;
+}
+
+.def-list textarea {
+	height: 100px;
+}
+
+.def-list li {
+	margin: 20px 0px;
+}
+/* 表单中内容验证后 信息提示，注意与下方的对话框的提示信息区别 */
+.list-msg {
+	display: none;
+	padding-left: 100px;
+}
+
+.list-msg-error {
+	color: #cd4e31;
+}
+
+.list-msg-suggest {
+	color: #149551;
+}
+
+label.error {
+	color: #cd4e31;
+}
+/***** BEGIN TABLE *****/
+.datalist {
+	margin-top:15px;
+	border: 1px solid #0058a3; /* 表格边框 */
+	font-family: Arial;
+	border-collapse: collapse; /* 边框重叠 */
+	background-color: #eaf5ff; /* 表格背景色 */
+	font-size: 13px;
+	width:100%;
+}
+
+.datalist caption {
+	padding-bottom: 5px;
+	font: bold 1.4em;
+	text-align: center;
+	font-size:24px;
+	
+}
+
+.datalist caption label {
+	font-weight:bold;
+}
+
+.datalist th {
+	border: 1px solid #0058a3; /* 行名称边框 */
+	background-color: #4bacff; /* 行名称背景色 */
+	color: #FFFFFF; /* 行名称颜色 */
+	font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-align: center;
+}
+
+.datalist td {
+	border: 1px solid #0058a3; /* 单元格边框 */
+	text-align: left;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.datalist tr.altrow {
+	background-color: #c7e5ff; /* 隔行变色 */
+}
+
+.datalist tr.mouseOver {
+	background-color: #fff38f;
+}
+/**END table**/
+
+.search {
+	text-align: center;
+	margin-top:10px;
+	margin-bottom:8px;
+	font-size: 13px;
+}
+
+.x-form {
+	width: 80%;
+	margin: 0 auto;
+	border-bottom: 1px solid #E9E9E9;
+}
+
+/*icon*/
+.touchin-icon {
+	background:url(../images/ui-icons.png) no-repeat;
+	background-repeat: no-repeat;
+}
+.touchin-icon-view {
+	background-position:-160px -110px;
+}
+
+.flexigrid div.fbutton .add {
+	background: url(../images/action_add.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .remove {
+	background: url(../images/action_remove.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .view {
+	background: url(../images/comments.png) no-repeat center left;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }

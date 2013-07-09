@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页 登录前</title>
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="../scripts/bbs.top-beforelogin.js"></script>
+<script type="text/javascript" src="../scripts/bbs.js"></script>
+
+<script type="text/javascript">
+<!--
+	$(document).ready(function (){
+	
+       $.blockUI({ 
+            message: $('div.growlUI'), 
+            fadeIn: 700, 
+            fadeOut: 700, 
+            timeout: false, 
+            showOverlay: true, 
+            centerY: 50, 
+            css: { 
+                width: '350px', 
+                top: '70px', 
+				left: '50%',
+				'margin-left': '-175px',
+                border: 'none', 
+                padding: '5px', 
+                '-webkit-border-radius': '10px', 
+                '-moz-border-radius': '10px',
+                opacity: .5,
+                color: '#fff',
+				'font-weight':'bold',
+				'font-size':'20px',
+				'filter':'alpha(opacity=50)',
+				'-moz-opacity':.5,
+				'-khtml-opacity':.5,
+				opacity:.9,
+				top: '20%',
+				backgroundColor: '#00A54F' 
+            }
+        });
+
+	    $('.blockUI').css('cursor','default');
+	});
+//-->
+
+</script>
+
+</head>
+<body>
+	<div class="bbs-index-main" style="height:520px;">
+		<div class="bbs-index-pic1">
+			happy
+		</div>
+		<div class="bbs-index-pic2">
+			112
+		</div>
+		<div class="bbs-searchbar">
+			<input type="text" value="">
+			<a href="bbs.list-shop.html" target="_blank" style="float: right;">
+				<img src="../images/search.png" style="width:20px;">
+			</a>
+		</div>
+		<div class="bbs-index-pic3">
+			快乐就像1+1=2这样简单..
+		</div>
+	
+	</div>
+	
+	<!--
+	<div class="bbs-footer">
+		<div class="bbs-footer-con">
+			<ul class="list">
+				<li><a target="_blank" href="bbs.aboutus.html">关于happy112</a></li>
+				<li><a target="_blank" href="bbs.contactus.html">联系我们</a></li>
+				<li><a target="_blank" href="bbs.policy-disclaimer.html">版权声明和隐私保护</a></li>
+			</ul>
+			<div class="bbs-rights">
+				&#169 2012 happy112.com, all rights reserved 
+			</div>
+
+		</div>
+		
+	</div>
+	-->
+
+	<div class="growlUI">
+		论坛将于一周后开放，届时敬请广大朋友光临！
+	</div>
+
+</body>
+</html>

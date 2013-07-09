@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- enable the configuration of transactional behavior based on annotations -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>	
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- Proxy for a target JDBC(DataSource), adding awareness of Spring-managed transactions -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy" scope="singleton">
+		<constructor-arg><ref bean="dataSourceTarget"/></constructor-arg>
+	</bean>
+	
+	<!-- 
+	<bean id="dataSourceTarget" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.passwd}"/>
+	</bean>
+	
+	<bean id="dataSourceTarget" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.passwd}"/>
+	</bean>
+	
+	<bean id="dataSourceTarget" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.passwd}"/>
+	</bean>
+	
+	<bean id="dataSourceTarget" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+	    <property name="url" value="${jdbc.url}"/>
+	    <property name="username" value="${jdbc.user}"/>
+	    <property name="password" value="${jdbc.passwd}"/>
+	    <property name="initialSize" value="1"/>
+	    <property name="maxActive" value="20"/>
+	</bean>
+	
+	<bean id="dataSourceTarget" class="cn.touchnan.db.ProxyComposeBoneCPDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.passwd}"/>
+	</bean>	
+	-->
+	
+	<bean id="dataSourceTarget" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.passwd}"/>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="packagesToScan">
+            <list>
+               <value>cn.touchnan.entity</value>
+            </list>
+        </property>
+        <property name="mappingDirectoryLocations">
+            <list>
+        		<value>classpath:cn/touchnan/domain</value>
+        	</list>
+        </property>        
+        <property name="hibernateProperties">
+            <props>
+              <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+              <prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+              <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+              <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+              <prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
+              <prop key="hibernate.cache.use_structured_entries">${hibernate.cache.use_structured_entries}</prop>
+              <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+              <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+              <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+            </props>
+        </property>
+        <property name="useTransactionAwareDataSource" value="true"></property>
+    </bean>
+	
+	<bean id="db" class="cn.touch.db.MySQLdb" scope="singleton">
+		<constructor-arg ref="dataSource"></constructor-arg>
+	</bean>
+	
+	<bean id="sqlParser" class="cn.touchin.db.jdbc.MysqlSQLParser" scope="singleton"></bean>
+</beans>

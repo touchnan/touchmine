@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>谋图片页面 登录前</title>
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+<link type="text/css" href="../style/shop-show.css" rel="stylesheet">
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="../scripts/demo.js"></script>
+
+<script type="text/javascript" src="../scripts/bbs.top-beforelogin.js"></script>
+
+
+</head>
+<body>
+
+	<div class="bbs-main">
+		
+		<div class="grid_17 image-show">
+			<h2 class="disc-h2">Oh My God 建议回帖数达60条，设置一页<a id="test2"class="disc-del" href="#">&#9668编辑</a></h2>
+			<div class="disc-title" style="display:none;">
+				<input type="text" value="Oh My God 建议回帖数达60条，设置一页">
+				<a class="all-btn grey-btn">完成</a>
+				<a class="all-btn grey-btn">取消</a> 
+			</div>
+			<div class="disc-con">
+				<div class="image-pic">
+					<img src="../img/ad5.jpg" style="max-width: 636px;">
+					<a class="disc-edit" href="#">&#9650编辑图片</a>
+				</div>
+				<div>
+					<div class="image-disc">
+						fsdfsdfdsfsdffdfsd fsdfsdf房价多少李方军付款了的设计费栗色的付款了桑德菲杰sdl附件里是答复收到了
+						房价多少李方军付款了的设计费栗色的付款了桑德菲杰sdl附件里是答复收到了房价多少李方军付款了的设计费栗色的付款了桑德菲杰sdl附件里是答复收到了房价多少李方军付款了的设计费栗色的付款了桑德菲杰sdl
+						
+					</div>
+					<a id="test1" class="disc-edit" href="javascript:;">&#9668编辑</a>
+				</div>
+				
+				<div class="disc-edit-box" style="display:none;">
+					<textarea cols="88" rows="5">点击该框 提示相关登录信息</textarea>
+					<a class="all-btn grey-btn">完成</a>
+					<a class="all-btn grey-btn">取消</a>
+				</div>
+			</div>
+			<div class="disc-agree">
+				<a href="#" class="like" title="赞一个"><span>赞图标</span>顶顶顶</a>
+				<a href="#" class="dislike" title="我不赞同"><span>踩图标</span>踩一下</a>
+			</div>
+			
+
+			<div class="disc-answer">
+				<!-- <h3>回 复</h3> -->
+				<div class="disc-answer-result">
+					<div style="overflow:hidden;">
+						<div class="disc-answer-floor"><p><span class="first">1</span>L：</p><span class="disc-action-time">2012-08-22 13:27:27</span></div>
+						<div class="disc-answer-con">
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+						</div>
+					</div>
+					<a class="disc-del" href="#">&#9650删除</a>
+					<div class="disc-user">
+						<a class="disc-details" href="#">
+							user111name
+						</a>
+						<a href="#">
+							<img width="50" height="50" src="../img/goodssmallpic_2.jpg_40x40.jpg">
+						</a>
+					</div>
+
+				</div>
+				<div class="disc-answer-result">
+					<div style="overflow:hidden;">
+						<div class="disc-answer-floor"><p><span class="second">2</span>L：</p><span class="disc-action-time">2012-08-22 13:27:27</span></div>
+						<div class="disc-answer-con">
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+						</div>
+					</div>
+					<a class="disc-del" href="#">&#9650删除</a>
+					<div class="disc-user">
+						<a class="disc-details" href="#">
+							user111name
+						</a>
+						<a href="#">
+							<img width="50" height="50" src="../img/goodssmallpic_2.jpg_40x40.jpg">
+						</a>
+					</div>
+
+				</div>
+				<div class="disc-answer-result">
+					<div style="overflow:hidden;">
+						<div class="disc-answer-floor"><p><span class="third">3</span>L：</p><span class="disc-action-time">2012-08-22 13:27:27</span></div>
+						<div class="disc-answer-con">
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+						</div>
+					</div>
+					<a class="disc-del" href="#">&#9650删除</a>
+					<div class="disc-user">
+						<a class="disc-details" href="#">
+							user111name
+						</a>
+						<a href="#">
+							<img width="50" height="50" src="../img/goodssmallpic_2.jpg_40x40.jpg">
+						</a>
+					</div>
+
+				</div>
+				<div class="disc-answer-result">
+					<div style="overflow:hidden;">
+						<div class="disc-answer-floor"><p><span>4</span>L：</p><span class="disc-action-time">2012-08-22 13:27:27</span></div>
+						<div class="disc-answer-con">
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+							<p>fdsfsdfsdfsdfdsfsdfsdfdfsdf</p>
+						</div>
+					</div>
+					<a class="disc-del" href="#">&#9650删除</a>
+					<div class="disc-user">
+						<a class="disc-details" href="#">
+							user111name
+						</a>
+						<a href="#">
+							<img width="50" height="50" src="../img/goodssmallpic_2.jpg_40x40.jpg">
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<ul class="bbs-page">
+				<li><span class="prev">&lt;&lt;</span></li>
+				<li><a href="#">1</a></li>
+				<li><span class="thispage">2</span></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><span class="break">...</span></li>
+				<li><a href="#">30</a></li>
+				<li>
+					<span class="next">
+						<a href="#">&gt;&gt;</a>
+					</span>
+				</li>
+				
+
+			</ul>
+			<div class="disc-myanswer">
+				<!-- <h3>我来回应</h3> -->
+				<textarea  rows="5" cols="88">点击该框 提示相关登录信息</textarea>
+				<a class="all-btn green-btn">回 复</a>
+			</div>
+
+		</div>
+
+		<div class="grid_7 image-relative">
+			<div class="disc-info">
+				<div class="disc-writer">
+					<a href="#">
+						<img width="80" height="80" src="../img/goodssmallpic_2.jpg_40x40.jpg">
+					</a>
+					<a href="#" class="disc-details">
+						mudenglong
+					</a>
+					<ul class="tags">
+						<li>大一</li>
+						<li>湖北</li>
+						<li>浙江工商大学</li>
+					</ul>
+					<p>图片来源:<span class="orange">店长发布</span></p>
+					<span>最后编辑时间：2012-08-22 13:27:27</span>
+					<div><span class="viewed">123456</span>人浏览</div>
+					<ul class="evaluate">
+						<li><span class="like">123</span>
+人顶</li>
+						<li><span class="dislike">123</span>人踩</li>
+					</ul>
+				</div>
+			</div>
+
+			<a href="bbs.shop.html" class="all-btn grey-btn back">回到店铺</a>
+			<a href="bbs.shop-management-pic.html" class="all-btn green-btn back">图片管理(增、删等)</a>
+
+			<h3 class="tag4"><span class="left">本店铺最热图片</span></h3>
+			<div class="list vertical-menu2 shop-hotimages">
+				<ul>
+					<li class="shop-gs">
+						<a href="bbs.shop.html" class="shop-gsImageLink">
+							<img src="../img/ad5.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						<span class="images-sequence">NO.1</span>
+						
+					</li>
+					<li class="shop-gs shopin-gs">
+						<a href="bbs.shop.html" class="shop-gsImageLink">
+							<img src="../img/ad1.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						<span>NO.2</span>
+					</li>
+					<li class="shop-gs shopin-gs">
+						<a href="bbs.shop.html" class="shop-gsImageLink">
+							<img src="../img/ad2.jpg" alt="no-bake peanut butter bars" class="shop-gsImage">
+						</a>
+						<span>NO.3</span>
+					</li>
+			</div>
+
+
+			<a href="#" title="举报">举报不良信息</a>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

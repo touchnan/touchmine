@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Layout Example</title>
+<link type="text/css" href="../style/houtai.css" rel="stylesheet">
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.layout-latest.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+var myLayout;
+$(document).ready(function () {
+
+	myLayout = $('body').layout({
+	maskContents: 					true	//center pane里用到iframe，则需要此选项
+
+	//	some resizing/toggling settings
+	,	north__size:				80
+	,	north__togglerLength_closed: '100%'	// toggle-button is full-width of resizer-bar
+	,	north__spacing_closed:		20		// big resizer-bar when open (zero height)
+	
+	,	south__spacing_open:		0		// no resizer-bar when open (zero height)
+	,	east__spacing_open:			0		// no resizer-bar when open (zero height)
+	// ,	east__size:					300
+	// ,	east__minSize:				200
+	// ,	east__maxSize:				.5 // 50% of layout width
+	,	center__minWidth:			100
+
+	,	west__minSize:				200
+	,	west__spacing_closed:		20		// big resizer-bar when open (zero height)
+	//	some pane animation settings
+	,	west__animatePaneSizing:	false
+	,	west__fxSpeed_size:			"fast"	// 'fast' animation when resizing west-pane
+	,	west__fxSpeed_open:			1000	// 1-second animation when opening west-pane
+	,	west__fxSettings_open:		{ easing: "easeOutBounce" } // 'bounce' effect when opening
+
+	,	west__fxName_close:			"none"	// NO animation when closing west-pane
+
+	
+
+	});
+	$("#demo_open1").children("ul li").click(function(){
+		var url = $(this).attr("title");
+		$("#theone").attr("src",url);
+	});
+
+});
+</script>
+	<div class="ui-layout-north">
+		<div >
+			<ul id="demo_open1" class="houtai-list">
+				
+				<li title="">11管理</li>
+				<li title="">12管理</li>
+				<li title="">12管理</li>
+				<li title="">12管理</li>
+				<li title="iframe_msg.html">消息管理</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="ui-layout-west">
+		west
+	</div>
+	<div class="ui-layout-center">
+		<iframe id="theone" width="100%" scrolling="auto" height="100%" frameborder="0" src="">
+	</div>
+
+
+
+</body>
+
+</html>

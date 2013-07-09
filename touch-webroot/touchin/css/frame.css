@@ -1,0 +1,117 @@
+@CHARSET "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td, form, select {margin: 0; padding: 0;}
+body, button, select, textarea {font: 12px/1.5 Arial, "\5b8b\4f53", sans-serif; background-color:#f3f3f3;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}
+address, cite, dfn, em, var {font-style: normal;}
+code, kbd, pre, samp, tt {font-family: "Courier New", Courier, monospace;}
+small {font-size: 12px;}		
+ul, ol {list-style: none;}
+a {text-decoration:none;}
+a:hover {text-decoration: underline;}
+q:before, q:after {content: '';}
+legend {color: #000;}
+fieldset, img {border: none;}
+button, input, select, textarea {font-size: 100%;}
+hr {border: none;height: 1px;}
+html {overflow-y: scroll;}
+
+
+/*jquery-layout 样式*/
+.ui-layout-resizer-open{
+	background:#b5d9e8;	
+}
+.ui-layout-resizer-open-hover{
+	background:#99c4d6;
+}
+.ui-layout-toggler{
+	background:#e07f27;	
+}
+.ui-layout-pane{
+	padding: 0px;
+	overflow: auto;
+}
+
+#touchin-header {
+	/*
+	background: none repeat scroll 0 0 #666666;
+	*/
+	background: none repeat scroll 0 0 #4AB3C6;
+
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: left;	
+}
+
+#touchin-topmenu {
+	text-align: right;
+}
+
+#touchin-footer {
+	padding: 10px;
+	text-align: center;
+}
+
+#touchin-show {
+	float: right;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#touchin-topmenu a {
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 1px 3px;
+	text-decoration: none;
+}
+
+#touchin-topmenu a:hover {
+	text-decoration: underline;
+}
+
+a.download-link {
+	color: #0000FF;
+}
+
+.accordion .accordion-header {
+	background: #fafafa;
+}
+
+.accordion .accordion-header-selected {
+	background: url('../images/nav.png') center bottom no-repeat;
+	height: 35px;
+	border: 0;
+}
+
+.pitem {
+	list-style-type: none;
+	margin: 0;
+	padding: 2px 0 10px 20px;
+}
+
+.pitem li {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+ul#icons {
+	margin: 0;
+	padding: 0;
+}
+
+ul#icons li {
+	margin: 2px;
+	position: relative;
+	padding: 4px 0;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+
+ul#icons span.ui-icon {
+	float: left;
+	margin: 0 4px;
+}

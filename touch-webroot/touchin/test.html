@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理应用系统</title>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+<script type="text/javascript" src="../jquery/1.7/jquery-1.7.js"></script>
+<script type="text/javascript" src="js/os.custom.js"></script>
+
+ <script type="text/javascript">
+ <!--
+	$(document).ready(function() {
+	});	
+ 
+ 	function login() {
+ 		
+		return false;
+ 	}
+ 	
+ 	function showMsg(msg) {
+ 		$('.list-msg').show();
+ 		$('.list-msg-error').text(msg);;
+ 	}
+ //-->
+ </script>
+ 
+</head>
+<body>
+     <div class="container">
+         <header>
+             <h1><span>煮酒</span>后台管理系统</h1>
+         </header>
+         <section>				
+             <div id="container_section" >
+                 <div id="wrapper">
+                     <div id="login" class="animate form">
+                         <form  method="post" id="lform" onsubmit="return login()" autocomplete="on"> 
+                             <h1>登录</h1>
+							 <div class="list-msg">
+							 	<p class="list-msg-error"></p>
+							 	<br>
+							 </div>                       
+                             <p>
+                                 <label for="loginName" class="uname" data-icon="u" > 用户名 </label>
+                                 <input id="loginName" name="loginName" required="required" type="text" placeholder="请输入用户名" value="<s:property value='loginName'/>" />
+                             </p>
+                             <p>
+                                 <label for="passwd" class="youpasswd" data-icon="p"> 密码 </label>
+                                 <input id="passwd" name="passwd" required="required" type="password" placeholder="请输入密码" /> 
+                             </p>
+                             <!-- 
+                             <p> 
+                                 <label for="imgcode" class="uname" data-icon=""> 验证码  
+                                   <img id="checkCode" src="<%=contextPath%>/imageValidate" align="absmiddle"></img>
+                                   <a href="#toregister" class="to_register">看不清？&nbsp;换张图片。</a>
+                                 </label>
+                                 <input id="imgcode" name="imgcode" required="required" type="text" placeholder="eg. X8df!90EO" /> 
+                             </p> 
+                              -->
+                             <p class="login button"> 
+                                 <input type="submit" value="Login" /> 
+							 </p>
+                         </form>
+                     </div>
+                 </div>
+             </div>  
+         </section>
+     </div>
+</body>
+</html>

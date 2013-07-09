@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="c" namespace="/c" extends="frame-default">
+        <action name="*!*" method="{2}" class="cn.touchnan.busi.www.mgr.{1}Action">
+        	<result type="freemarker">/ftl/{1}/{2}.ftl</result>
+        </action>
+    </package>
+    
+    <package name="site" namespace="/site" extends="frame-default">
+    	<!-- Add actions here -->
+        <action name="*!*" method="{2}" class="cn.touchnan.busi.www.site.{1}Action">
+        	<result type="freemarker">/ftl/{1}/{2}.ftl</result>
+        </action>    	
+    </package>
+    
+</struts>

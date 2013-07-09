@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>创建店铺 必定是登录后</title>
+<link type="text/css" href="../style/validationEngine.jquery.css" rel="stylesheet">
+<link type="text/css" href="../uploadify/uploadify.css" rel="stylesheet">
+<link type="text/css" href="../style/public.css" rel="stylesheet">
+<link type="text/css" href="../style/bbs.css" rel="stylesheet">
+
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine-zh_CN.js"></script>
+<script type="text/javascript" src="../scripts/jquery.validationEngine.js"></script>
+
+
+<script type="text/javascript" src="../scripts/bbs.top-afterlogin.js"></script>
+<script type="text/javascript" src="../scripts/bbs.js"></script>
+
+</head>
+
+<body>
+	<div class="bbs-main">
+		
+		<div class="grid_16 bbs-form">
+			<h2 class="bbs-list-h2">创建店铺</h2>
+			<form id="form">
+				<ul class="list bbs-list">
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>店铺名称：
+							</span>
+							<input placeholder="XXX西湖店" data-validation-engine="validate[required,maxSize[20],minSize[5],custom[noSpecialCaracters]" type="text" />
+							<!-- <input value="This is a placeholder" data-validation-placeholder="This is a placeholder" class="validate[required]" type="text" name="reqplaceholder" id="reqplaceholder" /> -->
+							<!-- <input id="reqplaceholder" class="validate[required] text-input" type="text" name="reqplaceholder" data-validation-placeholder="This is a placeholder" value="This is a placeholder"> -->
+							<div class="list-msg">
+								<p class="list-msg-suggest">5到20个字符，不允许输入“（）”等非法字符</p>
+							</div>
+						</label>
+					</li>
+
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>店铺所属类别：
+							</span>
+							<span>
+								<select data-validation-engine="validate[required]">
+								<!-- <select class="validate[required]" > -->
+									<option value="">请选择</option>
+									<option value="1">美食</option>
+									<option value="2">娱乐</option>
+									<option value="3">其他</option>
+								</select>
+							</span>
+						</label>	
+						<span>
+							<select data-validation-engine="validate[required]">
+								<option value="">请选择</option>
+								<option value="1">火锅</option>
+								<option value="2">烧烤</option>
+								<option value="3">麻辣烫</option>
+								<option value="4">西餐</option>
+								<option value="5">海鲜</option>
+								<option value="6">家常菜</option>
+								<option value="7">日韩料理</option>
+								<option value="8">快餐</option>
+								<option value="9">蛋糕甜点</option>
+								<option value="10">其他</option>
+							</select>
+						</span>
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>店铺地址：
+							</span>
+							<span>
+								<select data-validation-engine="validate[required]">
+									<option value="">请选择地区</option>
+									<option value="1" selected="selected">H杭州</option>
+								</select>
+							</span>
+						</label>	
+						<span>
+							<select>
+								<option value="">请选择地区</option>
+								<option value="1">西湖区</option>
+								<option value="1">--西湖北线/黄龙</option>
+								<option value="1">--龙井/虎跑</option>
+								<option value="1">--高新文教区</option>
+								<option value="1">--古墩路沿线</option>
+								<option value="1">上城区</option>
+								<option value="1">--湖滨</option>
+								<option value="1">--南山路</option>
+								<option value="1">--吴山广场/河坊街</option>
+								<option value="1">--城站火车站</option>
+								<option value="1">下城区</option>
+								<option value="1">--武林广场</option>
+								<option value="1">--凤起路沿线</option>
+								<option value="1">--庆春路沿线</option>
+								<option value="1">--朝晖地区</option>
+								<option value="1" >拱墅区</option>
+								<option value="1">--湖墅南路</option>
+								<option value="1">--大关</option>
+								<option value="1">--拱宸桥/上塘</option>
+								<option value="1" >江干区</option>
+								<option value="1">--城东</option>
+								<option value="1">--下沙</option>
+								<option value="1">萧山区</option>
+								<option value="1">--城厢</option>
+								<option value="1">--北干</option>
+								<option value="1">--萧山其他</option>
+								<option value="1">滨江区</option>
+								<option value="1">--开发区/高教园</option>
+							</select>
+						</span>
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>店铺详细地址：
+							</span>
+							<input  id="aaaa"  data-validation-engine="validate[required]" type="text" placeholder="拱墅区莫干山路XXX号 A座402">
+						</label>
+					   
+						<div style="display:block;" class="list-msg">
+							<!-- <p class="list-msg-error">Error:There seems to have been an issue, please try again later.</p> -->
+							<p class="list-msg-suggest">
+								请具体到门牌号码
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<label>
+							<span class="list-l">
+								店铺简介：
+							</span>
+							<textarea placeholder="店铺主营各式甜点，特别推荐..." class="validate[maxSize[150]]" rows="4"></textarea>
+						</label>
+						<div style="display:block;" class="list-msg">
+							<p class="list-msg-suggest">
+								简介内容在150字以内
+							</p>
+						</div>
+						
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								<span class="form-required">*</span>上传店铺门店图：
+							</span>
+							<span class="all-btn blue-btn upfile1-btn">  
+								<input type="file" size="1" class="upfile1-input">  
+								<a href="javascript:void(0);">上传图片</a> 
+							</span>
+						</label>
+						<div style="display:block;" class="list-msg">
+							<p class="list-msg-suggest">
+							有大小或者种类限制,可以是logo，
+							</p>
+						</div>
+					</li>
+					<li>
+						<label>
+							<span class="list-l">
+								我要申请加V：
+							</span>
+							<input type="text" value="输入验证信息，某个证明自己的东西">
+						</label>
+						<div style="display:block;" class="list-msg">
+							<p class="list-msg-suggest">
+							点击后弹出两行：1.是杂志客户，2.现还未开通
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="list-msg">
+							<label>
+								<input type="checkbox">
+								<span>
+									我同意接受
+									<span class="main-color">happy112</span>
+									的各项
+									<a target="_blank" href="bbs.policy-agreement.html">使用条款</a>
+									。
+								</span>
+							</label>
+
+						</div>
+					</li>
+					<li>
+						<div class="list-msg">
+							<a class="all-btn blue-btn" target="_blank" href="bbs.shop.html">提 交</a>
+							<button class="all-btn blue-btn">返 回</button>
+							特别注意：当推荐人自己去看自己店铺的页面时，都该有”修改“功能，对于非加V推荐人，还有删除贴子的权限
+						</div>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="grid_8 discc-form-tips bbs-form-tips">
+			<a class="all-btn grey-btn back msg-back">返 回</a>	
+			<h3 class="tag4">
+				<span class="left main-color">店铺创建的基本要求</span>
+			</h3>
+			<ul class="list vertical-menu2">
+				<li>&#10022请填写有效的店铺信息</li>
+				<li>blablabla</li>
+				<li>房间的了双方就死定了</li>
+				<li>看看法律上的</li>
+				<li>发的说法是的</li>
+				<li>发的说法是的</li>
+			</ul>
+		</div>
+	</div>
+	有系统自动生成的有：
+	<ul>
+		
+		<li>店铺是否加V：</li>
+		<li>店铺是在昕沙第几期第几页有介绍的：</li>
+
+
+		<li>店铺喜欢人数：</li>
+		<li>店铺创建时间：</li>
+		<li>店铺推荐人 名字和头像：</li>
+	</ul>
+	<input value='est' onclick="ttt()">
+<script type="text/javascript">
+	
+	function ttt(){
+		$('#aaaa').validationEngine("showPrompt","提示内容 X E S","error","bottomRight",true);
+	}
+
+	$(document).ready(function(){
+		$("#form").validationEngine();
+		$("#form").validationEngine('attach', {promptPosition : "bottomRight", scroll: false});
+		// $('#form input').each(function () {
+		// 	// console.log($(this))
+		// 	$(this).bind("blur",function(){
+		// 		// alert("fsdfsdf");
+		// 		if(this.value=='') this.value=this.defaultValue	;
+		// 	});
+		// 	$(this).bind("focus",function(){
+		// 		// alert("focus");
+		// 		if(this.value==this.defaultValue) this.value='';
+		// 	});
+
+		// });
+		
+
+	});
+
+
+	
+</script>
+</body>
+</html>

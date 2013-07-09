@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="c" namespace="/c" extends="frame-default">
+     	<action name="upload-*" method="{1}" class="cn.wanto.busi.www.mgr.FileAction"></action>
+        
+        <action name="*-*" method="{2}" class="cn.wanto.busi.www.mgr.{1}Action">
+        	<result type="freemarker">/ftl/mgr/{2}.ftl</result>
+        </action>
+    </package>
+    
+    <package name="site" namespace="/site" extends="frame-default">
+    	<!-- Add actions here -->
+        <action name="*-*" method="{2}" class="cn.wanto.busi.www.site.{1}Action">
+        	<result type="freemarker">/ftl/{1}/{2}.ftl</result>
+        	<result name = "input" type="freemarker">/ftl/{1}/registers.ftl</result>
+        </action>    	
+    </package>
+    
+    <package name="bg" namespace="/bg" extends="frame-default">
+    	<!-- Add actions here -->
+        <action name="*-*" method="{2}" class="cn.wanto.busi.www.bg.{1}Action">
+        	<result type="freemarker">/ftl/{1}/{2}.ftl</result>
+        </action>    	
+    </package>    
+</struts>
