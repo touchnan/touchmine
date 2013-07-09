@@ -1,0 +1,4 @@
+优化tomcat配置：
+	maxThreads="500" minSpareThreads="400" maxSpareThreads="450"。但是tomcat 最多支持500个并发访问 
+优化apache配置： 
+	ThreadsPerChild 1900  MaxRequestsPerChild 10000 

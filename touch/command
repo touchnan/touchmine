@@ -1,0 +1,12 @@
+mvn site
+
+mvn checkstyle:checkstyle
+mvn checkstyle:check
+
+
+mvn package -Dmaven.test.failure.ignore=true
+mvn package -Dmaven.test.skip=true
+
+mvn project-info-reports:dependencies
+
+mvn dependency:copy-dependencies -DoutputDirectory=lib

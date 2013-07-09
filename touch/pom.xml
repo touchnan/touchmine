@@ -1,0 +1,335 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.touch</groupId>
+	<artifactId>touch</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>touch's core</name>
+	<description>touch's core depends on the opensource.</description>
+
+	<developers>
+		<developer>
+			<id>hancq</id>
+			<name>hancq</name>
+			<email>touchnan@gmail.com</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<version.dbutils>1.5</version.dbutils>
+		<version.codec>1.7</version.codec>
+		<version.lang3>3.1</version.lang3>
+
+		<version.junit>4.8.1</version.junit>
+
+		<version.io>2.4</version.io>
+		<version.compress>1.5</version.compress>
+		<version.httpclient>4.2.1</version.httpclient>
+
+		<version.slf4j>1.6.1</version.slf4j>
+		<version.log4j>1.2.16</version.log4j>
+
+		<version.mysql>5.1.16</version.mysql>
+		<version.druid>0.2.5</version.druid>
+		<version.dbcp>1.4</version.dbcp>
+		<version.c3p0>0.9.1.2</version.c3p0>
+		<version.bonecp>0.7.1.RELEASE</version.bonecp>
+		<version.guava>14.0.1</version.guava>
+
+		<version.jackson>2.0.2</version.jackson>
+		<version.fastjson>1.1.22</version.fastjson>
+
+		<version.freemarker>2.3.19</version.freemarker>
+		<version.mail>1.4.5</version.mail>
+		
+		<version.jsoup>1.7.1</version.jsoup>
+
+	</properties>
+
+
+	<repositories>
+		<repository>
+			<id>alibaba-opensource</id>
+			<name>alibaba-opensource</name>
+			<url>http://code.alibabatech.com/mvn/releases/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>alibaba-opensource-snapshot</id>
+			<name>alibaba-opensource-snapshot</name>
+			<url>http://code.alibabatech.com/mvn/snapshots/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<build>
+		<finalName>touch</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/nutz</source>
+								<source>src/main/module</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+					</includes>
+					<excludes>
+						<exclude>**/TestAll.java</exclude>
+						<exclude>**/AllWith*.java</exclude>
+						<exclude>**/*Case.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<configLocation>file:${basedir}/checkstyle.xml</configLocation>
+					<enableRulesSummary>false</enableRulesSummary>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<xmlPath>xdocs/changes.xml</xmlPath>
+					<issueLinkTemplate>%URL%/%ISSUE%</issueLinkTemplate>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+	<dependencies>
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>${version.dbutils}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${version.codec}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${version.lang3}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${version.io}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>${version.compress}</version>
+			<scope>provided</scope>
+		</dependency>		
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${version.httpclient}</version>
+			<scope>provided</scope>
+			<exclusions>
+				<!-- <exclusion> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpcore</artifactId> 
+					</exclusion> <exclusion> <groupId>commons-logging</groupId> <artifactId>commons-logging</artifactId> 
+					</exclusion> -->
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${version.mysql}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${version.dbcp}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${version.c3p0}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jolbox</groupId>
+			<artifactId>bonecp</artifactId>
+			<version>${version.bonecp}</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>com.google.guava</groupId>
+					<artifactId>guava</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${version.guava}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${version.druid}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${version.slf4j}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${version.log4j}</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${version.jackson}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${version.jackson}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${version.jackson}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${version.fastjson}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${version.freemarker}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${version.mail}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		  <!-- jsoup HTML parser library @ http://jsoup.org/ -->
+		  <groupId>org.jsoup</groupId>
+		  <artifactId>jsoup</artifactId>
+		  <version>${version.jsoup}</version>
+		  <scope>test</scope>
+		</dependency>		
+	</dependencies>
+</project>
