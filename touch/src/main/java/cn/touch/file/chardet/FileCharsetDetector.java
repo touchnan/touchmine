@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.commons.io.IOUtils;
 import org.mozilla.intl.chardet.nsDetector;
 import org.mozilla.intl.chardet.nsICharsetDetectionObserver;
 
@@ -131,7 +132,7 @@ public class FileCharsetDetector {
             @Override
             public void notify(String charset) {
               found = true;
-              encoding = charset;                
+              encoding = charset;
             }
         });
 
@@ -151,6 +152,7 @@ public class FileCharsetDetector {
             if (!isAscii && !done)
                 done = det.DoIt(buf, len, false);
         }
+        IOUtils.closeQuietly(imp);
         det.DataEnd();
 
         if (isAscii) {
