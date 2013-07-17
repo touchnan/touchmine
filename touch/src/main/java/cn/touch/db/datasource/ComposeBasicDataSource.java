@@ -108,7 +108,7 @@ public class ComposeBasicDataSource extends BasicDataSource {
     public Connection getConnection(String username, String password) throws SQLException {
         BasicDataSource ds = getDataSourceTarget();
         if (this == ds) {
-            return super.getConnection();
+            return super.getConnection(username, password);
         }
         return ds.getConnection(username, password);
     }

@@ -104,7 +104,7 @@ public class ComposeBoneCPDataSource extends BoneCPDataSource {
     public Connection getConnection(String username, String password) throws SQLException {
         BoneCPDataSource ds = getDataSourceTarget();
         if (this == ds) {
-            return super.getConnection();
+            return super.getConnection(username, password);
         }
         return ds.getConnection(username, password);
     }
