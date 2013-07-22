@@ -27,11 +27,11 @@ public class MysqlSQLParser extends SQLParser {
     public SimpleSQLQuery createSQLQuery(SQLRunner runner) {
         StringBuffer sql = new StringBuffer("SELECT ");
         List<Object> params = createSql(runner, sql);
-        Object[] pageParams = null;
+        Object[] queryParams = null;
         if (params != null && !params.isEmpty()) {
-            pageParams = params.toArray(new Object[params.size()]);
+            queryParams = params.toArray(new Object[params.size()]);
         }
-        return new SimpleSQLQuery(sql.toString(), pageParams);
+        return new SimpleSQLQuery(sql.toString(), queryParams);
     }
 
     /*
@@ -58,7 +58,8 @@ public class MysqlSQLParser extends SQLParser {
         pageParams[pageParams.length - 2] = first(runner.flexiPage);
         pageParams[pageParams.length - 1] = second(runner.flexiPage);
 
-        return new PageQuery(sql.toString(), pageParams, countSql.toString(), countParams);
+        return new PageQuery(sql.toString(), pageParams, countSql.toString(),
+                countParams);
     }
 
     private long first(Pagination page) {
@@ -77,7 +78,7 @@ public class MysqlSQLParser extends SQLParser {
      * )
      */
     public long[] getSQLPageParams(Pagination page) {
-        return new long[] { page.getFirst() - 1, page.getRp() };
+        return new long[] { first(page), second(page) };
     }
 
 }

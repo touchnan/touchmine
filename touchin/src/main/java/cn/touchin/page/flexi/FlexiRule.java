@@ -128,6 +128,8 @@ public class FlexiRule {
                     case ew:
                         this._data = "%" + this.data;
                         break;
+                    default:
+                        throw new RuntimeException("no match filtersopt");
                     }
 
                 } else if (this.op == FilterSopt.in || this.op == FilterSopt.ni) {

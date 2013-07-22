@@ -6,8 +6,6 @@ package cn.touchin.db.jdbc;
 
 import java.util.List;
 
-import org.nutz.lang.Strings;
-
 import cn.touchin.page.Pagination;
 
 /**
@@ -27,22 +25,13 @@ public class OracleSQLParser extends SQLParser {
      */
     @Override
     public SimpleSQLQuery createSQLQuery(SQLRunner runner) {
-        throw new RuntimeException("not impl yet!");
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see cn.touchin.db.jdbc.ISQLParser#genPageSQL(java.lang.String)
-     */
-    public String genPageSQL(String preSql, String midSql, String fixSql, String orderSql) {
-        StringBuffer sbf = new StringBuffer("SELECT * FROM (");
-        sbf.append(preSql).append(" , ROWNUM rownum_ ").append(midSql).append(" ROWNUM<=? , ").append(fixSql);
-        if (!Strings.isBlank(orderSql)) {
-            sbf.append(" ORDER BY ").append(orderSql);
+        StringBuffer sql = new StringBuffer("SELECT ");
+        List<Object> params = createSql(runner, sql);
+        Object[] queryParams = null;
+        if (params != null && !params.isEmpty()) {
+            queryParams = params.toArray(new Object[params.size()]);
         }
-        sbf.append(" )  WHERE rownum_>? ");
-        return sbf.toString();
+        return new SimpleSQLQuery(sql.toString(), queryParams);
     }
 
     /*
@@ -53,14 +42,11 @@ public class OracleSQLParser extends SQLParser {
      * )
      */
     public PageQuery createPageQuery(SQLRunner runner) {
-        // FIXME
-        if (true) {
-            throw new RuntimeException("not impl yet!");
-        }
-        StringBuffer sql = new StringBuffer("SELECT * FROM (SELECT ");
+        StringBuffer sql = new StringBuffer(
+                "SELECT * FROM ( SELECT row_.*, ROWNUM rownum_ FROM (SELECT ");
         StringBuffer countSql = new StringBuffer("SELECT (0)");
         List<Object> params = createPageSql(runner, sql, countSql);
-        sql.append(" LIMIT ?, ?");
+        sql.append(" ) row_ WHERE ROWNUM <= ?) WHERE rownum_ > ?");
         Object[] pageParams = null;
         Object[] countParams = null;
         if (params != null && !params.isEmpty()) {
@@ -72,7 +58,8 @@ public class OracleSQLParser extends SQLParser {
         pageParams[pageParams.length - 2] = first(runner.flexiPage);
         pageParams[pageParams.length - 1] = second(runner.flexiPage);
 
-        return new PageQuery(sql.toString(), pageParams, countSql.toString(), countParams);
+        return new PageQuery(sql.toString(), pageParams, countSql.toString(),
+                countParams);
     }
 
     /*
@@ -83,7 +70,7 @@ public class OracleSQLParser extends SQLParser {
      * )
      */
     public long[] getSQLPageParams(Pagination page) {
-        return new long[] { page.getPage() * page.getRp(), page.getFirst() - 1 };
+        return new long[] { first(page), second(page) };
     }
 
     private long first(Pagination page) {
