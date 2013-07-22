@@ -95,7 +95,14 @@
 		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 --> 
 		<property name="acquireRetryAttempts" value="30" />
 		<property name="breakAfterAcquireFailure" value="true" />
-		<property name="testConnectionOnCheckout" value="false" />		
+		<property name="testConnectionOnCheckout" value="false" />
+    
+    <!-- c3p0将建一张名为Test的空表，并使用其自带的查询语句进行测试。如果定义了这个参数那么 属性preferredTestQuery将被忽略。
+    <property name="automaticTestTable">Test</property>
+    -->
+    <!-- 定义所有连接测试都执行的测试语句 
+    <property name="preferredTestQuery" value="select id from test where id=1"/>
+     -->    
 	</bean>
 	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
