@@ -210,7 +210,7 @@ public class FlexiRule {
         return null;
     }
 
-    public Criterion in() {
+    private Criterion in() {
         flip();
         if (this.getValue() instanceof Collection<?>) {
             return Restrictions.in(this.getField(), (Collection<?>) this.getValue());
