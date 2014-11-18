@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.touch.j2ee</groupId>
+	<artifactId>jars</artifactId>
+
+	<version>0.1</version>
+	<packaging>jar</packaging>
+	<name>jars</name>
+	<description>jars</description>
+	
+	<properties>
+		<scope.compile>compile</scope.compile>
+		<scope.test>test</scope.test>
+
+		<version.jetty.maven>9.2.3.v20140905</version.jetty.maven>
+		<version.jetty>9.2.3.v20140905</version.jetty>
+		<version.jetty-test-helper>2.2</version.jetty-test-helper>
+
+	</properties>
+	
+	<dependencies>
+		<dependency>
+		  <groupId>org.eclipse.jetty.toolchain</groupId>
+		  <artifactId>jetty-test-helper</artifactId>
+		  <version>${version.jetty-test-helper}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-server</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-security</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<!-- <dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-spdy</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency> -->
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-deploy</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-util</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-servlet</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-webapp</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-annotations</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>apache-jsp</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>apache-jstl</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+<!-- 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> -->
+      
+		<plugin>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-maven-plugin</artifactId>
+			<version>${version.jetty.maven}</version>
+			<configuration>
+				<webAppConfig>
+					<contextPath>/${project.build.finalName}</contextPath>
+				</webAppConfig>
+				<httpConnector>
+					<port>9080</port>
+				</httpConnector>
+			</configuration>
+		</plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+        <source>1.7</source>
+        <target>1.7</target>
+        <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>      
+		</plugins>
+	</build>
+
+</project>

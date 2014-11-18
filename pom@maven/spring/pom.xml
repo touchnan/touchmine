@@ -1,0 +1,227 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.touch.j2ee</groupId>
+	<artifactId>jars</artifactId>
+
+	<version>0.1</version>
+	<packaging>jar</packaging>
+	<name>jars</name>
+	<description>jars</description>
+	
+	<properties>
+		<scope.compile>compile</scope.compile>
+
+		<!-- <version.spring-framework>3.2.11.RELEASE</version.spring-framework> -->
+		<version.spring-framework>4.1.2.RELEASE</version.spring-framework>
+	</properties>
+
+	<dependencies>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		
+		<!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans-groovy</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		
+		<!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-framework-bom</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument-tomcat</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		
+		<!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm-hibernate4</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc-portlet</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		
+		<!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc-tiles3</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+		-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+<!-- 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> -->
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+        <source>1.7</source>
+        <target>1.7</target>
+        <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>      
+		</plugins>
+	</build>
+
+</project>
