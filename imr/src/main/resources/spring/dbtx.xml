@@ -76,10 +76,6 @@
 		<property name="jdbcUrl" value="${jdbc.url}"/>
 		<property name="user" value="${jdbc.user}"/>
 		<property name="password" value="${jdbc.passwd}"/>
-		<property name="driverClass" value="${jdbc.driverClassName}"/>
-		<property name="jdbcUrl" value="${jdbc.url}"/>
-		<property name="user" value="${jdbc.user}"/>
-		<property name="password" value="${jdbc.passwd}"/>
 		<!--连接池中保留的最小连接数。-->
 		<property name="minPoolSize" value="10" />
 		<!--连接池中保留的最大连接数。Default: 15 --> 

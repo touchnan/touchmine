@@ -59,7 +59,7 @@
 			<result name="down" type="stream">
                 <!-- param name="contentCharSet">utf-8</param-->
                 <param name="encode">true</param>
-                <param name="contentType">*/*,charset=UTF-8</param>
+                <param name="contentType">*/*;charset=UTF-8</param>
                 <param name="inputName">stream</param>
                 <param name="contentDisposition">attachment;filename="${showName}";filename*=UTF-8''${showName}</param>
                 <param name="bufferSize">20480</param>
