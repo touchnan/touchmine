@@ -12,6 +12,8 @@
 	<properties>
 		<version.touchin>0.0.1-SNAPSHOT</version.touchin>
 		
+		<javaee-web.version>7.0</javaee-web.version>
+		
 		<!-- <version.dbcp>1.4</version.dbcp>
 		<version.c3p0>0.9.1.2</version.c3p0>
 		<version.bonecp>0.7.1.RELEASE</version.bonecp>
@@ -75,6 +77,13 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>${javaee-web.version}</version>
+			<scope>provided</scope>
+		</dependency>
+			
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.8.1</version>
@@ -85,7 +94,7 @@
 			<groupId>cn.touch</groupId>
 			<artifactId>touchin</artifactId>
 			<version>${version.touchin}</version>
-			<scope>runtime</scope>
+			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.quartz-scheduler</groupId>
