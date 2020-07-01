@@ -40,7 +40,7 @@
 		<version.struts>2.3.1.2</version.struts>
 		<version.aspectj>1.6.8</version.aspectj>
 		<version.cglib>2.2</version.cglib>
-		<version.quartz>1.8.6</version.quartz>
+		<version.quartz>2.3.2</version.quartz>
 
 		<version.antlr>2.7.6</version.antlr>
 		<version.hibernate>3.5.1</version.hibernate>
