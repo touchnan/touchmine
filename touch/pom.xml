@@ -30,7 +30,7 @@
 		<version.codec>1.7</version.codec>
 		<version.lang3>3.1</version.lang3>
 
-		<version.junit>4.8.1</version.junit>
+		<version.junit>4.13.1</version.junit>
 
 		<version.io>2.4</version.io>
 		<version.compress>1.5</version.compress>
