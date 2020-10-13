@@ -17,7 +17,7 @@
 		
 		<javaee-web.version>7.0</javaee-web.version>
 		
-		<version.junit>4.8.1</version.junit>
+		<version.junit>4.13.1</version.junit>
 
 		<version.io>2.4</version.io>
 		<version.collections>3.1</version.collections>
