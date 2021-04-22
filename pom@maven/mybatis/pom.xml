@@ -13,7 +13,7 @@
 		<scope.compile>compile</scope.compile>
 		<scope.test>test</scope.test>
 
-		<version.mybatis>3.2.8</version.mybatis>
+		<version.mybatis>3.5.6</version.mybatis>
 		<version.mybatis-spring>1.2.2</version.mybatis-spring>
 		<version.mybatis-memcached>1.0.0</version.mybatis-memcached>
 		<version.mybatis-guice>3.6</version.mybatis-guice>
