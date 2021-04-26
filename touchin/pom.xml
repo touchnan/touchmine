@@ -19,7 +19,7 @@
 		
 		<version.junit>4.8.1</version.junit>
 
-		<version.io>2.4</version.io>
+		<version.io>2.7</version.io>
 		<version.collections>3.1</version.collections>
 		<version.beanutils>1.8.3</version.beanutils>
 		<!--version.httpclient>4.2.1</version.httpclient-->
