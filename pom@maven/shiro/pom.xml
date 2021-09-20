@@ -13,7 +13,7 @@
 		<scope.compile>compile</scope.compile>
 		<scope.test>test</scope.test>
 
-		<version.shiro>1.2.3</version.shiro>
+		<version.shiro>1.8.0</version.shiro>
 	</properties>
 
 	<dependencies>
