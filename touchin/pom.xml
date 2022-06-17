@@ -53,7 +53,7 @@
 
 		<version.touch>0.0.1-SNAPSHOT</version.touch>
 		<version.jackson>2.0.2</version.jackson>
-		<version.fastjson>1.1.22</version.fastjson>
+		<version.fastjson>1.2.83</version.fastjson>
 		<version.freemarker>2.3.19</version.freemarker>
 
 	</properties>
