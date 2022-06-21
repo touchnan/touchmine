@@ -29,7 +29,7 @@
 		<version.slf4j>1.6.1</version.slf4j>
 		<version.log4j>1.2.15</version.log4j>
 
-		<version.mysql>5.1.16</version.mysql>
+		<version.mysql>8.0.28</version.mysql>
 		<version.druid>0.2.5</version.druid>
 		<version.dbcp>1.4</version.dbcp>
 		<version.c3p0>0.9.1.2</version.c3p0>
