@@ -15,7 +15,7 @@
 
 		<version.tomcat.maven>2.2</version.tomcat.maven>
 	    <version.tomcat.embed>7.0.56</version.tomcat.embed>
-		<version.tomcat>7.0.56</version.tomcat>
+		<version.tomcat>7.0.81</version.tomcat>
 	</properties>
 	
 	<dependencies>
