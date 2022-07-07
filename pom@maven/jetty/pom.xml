@@ -14,7 +14,7 @@
 		<scope.test>test</scope.test>
 
 		<version.jetty.maven>9.2.3.v20140905</version.jetty.maven>
-		<version.jetty>9.2.3.v20140905</version.jetty>
+		<version.jetty>10.0.10</version.jetty>
 		<version.jetty-test-helper>2.2</version.jetty-test-helper>
 
 	</properties>
