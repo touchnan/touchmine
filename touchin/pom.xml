@@ -36,7 +36,7 @@
 		<version.bonecp>0.7.1.RELEASE</version.bonecp>
 		<version.guava>r09</version.guava>
 
-		<version.spring>3.2.0.RELEASE</version.spring>
+		<version.spring>3.2.18.RELEASE</version.spring>
 		<version.struts>2.3.1.2</version.struts>
 		<version.aspectj>1.6.8</version.aspectj>
 		<version.cglib>2.2</version.cglib>
