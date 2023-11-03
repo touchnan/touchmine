@@ -48,6 +48,11 @@ public class ImageUtil {
         }
         w.i = ii.getWidth();
         h.i = ii.getHeight();
+        try {
+            inn.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return new MethodResult();
     }
 }
